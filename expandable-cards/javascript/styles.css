@@ -1,0 +1,87 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background-image: linear-gradient(to bottom, #06b6d4, #a5f3fc);
+  height: 100vh;
+  height: 100dvh;
+  line-height: 1;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 1.4rem;
+  background: hsl(189, 94%, 93%);
+  padding: 1rem;
+  line-height: 1.2;
+  width: 100%;
+  text-align: center;
+  border-radius: 2rem;
+  display: none;
+}
+
+/* grid implementation : grid-column doesn't have the transition property */
+/* .container {
+  height: 60rem;
+  display: grid;
+  grid-template-columns: 4fr repeat(10, 8rem);
+  gap: 2rem;
+  padding: 4rem;
+}
+
+.panel {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 5rem;
+  padding: 3rem;
+  display: flex;
+  align-items: flex-end;
+  cursor: pointer;
+}
+
+.active {
+  grid-column: span 7;
+} */
+
+.container {
+  height: 60rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-grow: 1;
+  padding: 4rem;
+  width: 80rem;
+}
+
+.panel {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 5rem;
+  padding: 3rem;
+  display: flex;
+  align-items: flex-end;
+  cursor: pointer;
+  transition: all ease-in 1s;
+}
+
+.active {
+  flex-grow: 2;
+}
+
+.active h3 {
+  display: block;
+}
