@@ -9,27 +9,20 @@ html {
 }
 
 body {
-  font-family: "Rubik", sans-serif;
-  background-image: linear-gradient(to bottom, #06b6d4, #a5f3fc);
-  height: 100vh;
-  height: 100dvh;
+  font-family: "Open Sans", sans-serif;
+  background-color: hsl(217, 33%, 30%);
+  /* background-image: linear-gradient(
+    to bottom right,
+    #1e293b,
+    rgb(203, 213, 225)
+  ); */
+  min-height: 100vh;
+  min-height: 100dvh;
   line-height: 1;
   font-weight: 400;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-h3 {
-  font-weight: 600;
-  font-size: 1.4rem;
-  background: hsl(189, 94%, 93%);
-  padding: 1rem;
-  line-height: 1.2;
-  width: 100%;
-  text-align: center;
-  border-radius: 2rem;
-  display: none;
 }
 
 /* grid implementation : grid-column doesn't have the transition property */
@@ -61,27 +54,74 @@ h3 {
   display: flex;
   justify-content: center;
   gap: 2rem;
-  flex-grow: 1;
-  padding: 4rem;
-  width: 80rem;
+  padding: 3rem;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 1.4rem;
+  background: hsl(189, 94%, 93%);
+  padding: 1rem;
+  line-height: 1.2;
+  width: 90%;
+  text-align: center;
+  border-radius: 2rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: all ease-in 1s;
+
+  bottom: 1rem;
 }
 
 .panel {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  border-radius: 5rem;
-  padding: 3rem;
+  border-radius: 8rem;
+  flex: 0.5;
   display: flex;
+  justify-content: center;
   align-items: flex-end;
+
   cursor: pointer;
-  transition: all ease-in 1s;
+  transition: all ease-in 800ms;
 }
 
 .active {
-  flex-grow: 2;
+  flex: 5;
+  padding: 2rem;
+  border: 2px solid hsl(51, 100%, 70%);
 }
 
 .active h3 {
-  display: block;
+  /* display: block; */
+  visibility: visible;
+  opacity: 1;
+}
+
+.panel:nth-child(1) {
+  background-image: url("https://images.unsplash.com/photo-1589827577276-65d717348780?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80");
+}
+
+.panel:nth-child(2) {
+  background-image: url("https://images.unsplash.com/photo-1590108589108-3600131de843?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1824&q=80");
+}
+.panel:nth-child(3) {
+  background-image: url("https://images.unsplash.com/photo-1614517453351-6c1522fc7a56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80");
+}
+.panel:nth-child(4) {
+  background-image: url("https://i0.wp.com/www.terhalak.com/wp-content/uploads/2020/10/Al-Masjid-an-Nabawi-and-10-facts.jpg?fit=1200%2C675&ssl=1");
+}
+.panel:nth-child(5) {
+  background-image: url("https://images.unsplash.com/photo-1581224463294-908316338239?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80");
+}
+
+/*  */
+@media (max-width: 55em) {
+  .container {
+    flex-direction: column;
+  }
+  .panel {
+    border-radius: 4rem;
+  }
 }
