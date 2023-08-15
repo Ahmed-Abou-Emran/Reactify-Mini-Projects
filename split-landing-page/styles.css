@@ -1,0 +1,83 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-weight: 400;
+  min-height: 100dvh;
+  min-height: 100vh;
+  width: 100dvw;
+  width: 100vw;
+  display: flex;
+  color: #f0fdfa;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+}
+
+.section {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  transition: width ease-in 500ms;
+}
+
+h2 {
+  font-size: 6rem;
+  font-weight: bold;
+}
+
+button {
+  background: transparent;
+  border: none;
+  box-shadow: inset 0 0 0 4px #f0fdfa;
+  padding: 2rem 8rem;
+  color: #f0fdfa;
+  font-size: 2.4rem;
+  transition-property: box-shadow, color;
+  transition: linear 400ms;
+}
+
+.right button:hover {
+  box-shadow: inset 0 0 0 100px #422006;
+  cursor: pointer;
+}
+.left button:hover {
+  box-shadow: inset 0 0 0 100px #fef08a;
+  color: #422006;
+  cursor: pointer;
+}
+
+.right {
+  background-image: url("https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80");
+  background-position: left;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: opacity(0.5);
+  box-shadow: inset 0 0 0 1000px rgba(133, 77, 14, 0.7);
+}
+.right:hover {
+  width: 80%;
+}
+
+.left {
+  background-image: url("https://pics.freeartbackgrounds.com/fullhd/Beautiful_Sunset_Background-1366.jpg");
+  box-shadow: inset 0 0 0 1000px rgba(253, 230, 138, 0.6);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.left:hover {
+  width: 80%;
+}
