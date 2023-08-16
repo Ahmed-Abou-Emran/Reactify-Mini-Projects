@@ -1,0 +1,105 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-weight: 400;
+  line-height: 1.5;
+  min-height: 100dvh;
+  min-height: 100vh;
+  width: 100dvw;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to right bottom, #eff6ff, #c7d2fe);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 5rem;
+  padding: 4rem;
+  background-image: linear-gradient(to right bottom, #1e40af, #172554);
+  color: #eff6ff;
+  border-radius: 2rem;
+  width: 40rem;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2.4rem;
+}
+.input-field {
+  position: relative;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+input {
+  background: none;
+  border: none;
+  border-bottom: 3px solid #eff6ff;
+  width: 100%;
+  height: 3rem;
+  outline: none;
+  color: inherit;
+}
+input ~ label {
+  font-weight: 600;
+  position: absolute;
+  left: 0;
+}
+.input-field label span {
+  display: inline-block;
+  font-size: 18px;
+  min-width: 5px;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.input-field input:focus + label span,
+.input-field input:valid + label span {
+  color: hsl(214, 100%, 87%);
+  transform: translateY(-30px);
+}
+
+input:focus {
+  border-bottom: 3px solid hsl(220, 100%, 77%);
+}
+button {
+  background-image: linear-gradient(to right, #93c5fd, #3b82f6);
+  height: 4rem;
+  border: none;
+  border-radius: 0.5rem;
+  color: #eff6ff;
+  font-size: 2rem;
+  padding: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all ease-in 300ms;
+}
+
+button:hover {
+  background-image: linear-gradient(
+    to right,
+    hsl(212, 96%, 68%),
+    hsl(217, 91%, 50%)
+  );
+  color: hsl(214, 100%, 87%);
+}
+
+form p {
+  font-size: 2rem;
+  font-weight: 500;
+}
+p a {
+  color: hsl(212, 96%, 68%);
+  font-size: 1.6rem;
+  text-decoration: none;
+}
