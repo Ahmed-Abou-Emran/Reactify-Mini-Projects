@@ -1,0 +1,74 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-weight: 400;
+  line-height: 1.5;
+  min-height: 100dvh;
+  min-height: 100vh;
+  min-width: 100dvw;
+  min-width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-image: linear-gradient(to right bottom, #f5f5f4, #a8a29e);
+}
+
+.container {
+  width: 60rem;
+  /* height: 40rem; */
+  padding: 4rem;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  gap: 2rem;
+  background-image: linear-gradient(to right bottom, #fef9c3, #ca8a04);
+}
+
+.ayah,
+.ayah-translation {
+  font-weight: 600;
+  font-size: 2.4rem;
+}
+
+.ayahBtn {
+  padding: 1rem 3rem;
+  border-radius: 1rem;
+  border: none;
+  background-image: linear-gradient(to rigth bottom, #fef3c7, #fbbf24);
+  transition: all ease-in 300ms;
+}
+
+.btn-grad {
+  background-image: linear-gradient(
+    to right,
+    #ffb347 0%,
+    #ffcc33 51%,
+    #ffb347 100%
+  );
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 0 2px #eee;
+  border-radius: 10px;
+  display: block;
+}
+
+.btn-grad:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+}
