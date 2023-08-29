@@ -1,0 +1,15 @@
+make steps for the projects
+make resources and explain the properties used in simple terms
+
+don't forget to understand everything written and explain it perfectly
+
+
+you need to know:
+
+important:
+background-image position repeat
+display:none doesn't animate;
+transition from display none to block
+good to know:
+flex-box in details (revise interactive guide)
+box-shadow for the images (revise the box-shadow article)

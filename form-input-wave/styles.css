@@ -43,18 +43,22 @@ h2 {
   font-weight: 400;
 }
 input {
-  background: none;
+  /* background: none; */
+  background: transparent;
   border: none;
   border-bottom: 3px solid #eff6ff;
   width: 100%;
   height: 3rem;
   outline: none;
   color: inherit;
+  /* z-index: 2; */
 }
 input ~ label {
   font-weight: 600;
   position: absolute;
   left: 0;
+
+  /* z-index: 1; */
 }
 .input-field label span {
   display: inline-block;
@@ -66,7 +70,7 @@ input ~ label {
 .input-field input:focus + label span,
 .input-field input:valid + label span {
   color: hsl(214, 100%, 87%);
-  transform: translateY(-30px);
+  transform: translateY(-3rem);
 }
 
 input:focus {
@@ -98,8 +102,24 @@ form p {
   font-size: 2rem;
   font-weight: 500;
 }
-p a {
+p a:link,
+a:visited {
   color: hsl(212, 96%, 68%);
   font-size: 1.6rem;
   text-decoration: none;
+}
+p a:hover,
+a:active {
+  color: hsl(212, 96%, 58%);
+  font-size: 1.6rem;
+  text-decoration: none;
+}
+
+button:focus,
+a:focus {
+  outline: 0;
+  outline-style: solid;
+  outline-color: hsl(212, 96%, 58%);
+  outline-width: 2px;
+  outline-offset: 4px;
 }
